@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Введите коэффициенты квадратного уравнения"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="ax^2+bx+c=0"
+        android:textColor="#aaaaaa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/editBlock"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/kof_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:textColor="@android:color/black"
+                android:text="Коэффициент a" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/edit_kof_a"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/kof_a"
+                android:hint="Введите коэффициент а"
+                android:textSize="12dp"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/kof_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:textColor="@android:color/black"
+                android:text="Коэффициент b" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/edit_kof_b"
+                android:layout_below="@id/kof_b"
+
+                android:hint="Введите коэффициент b"
+                android:textColor="@android:color/black"
+                android:textSize="12dp"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/kof_c"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Коэффициент c" />
+
+            <EditText
+                android:layout_width="180dp"
+                android:id="@+id/edit_kof_c"
+                android:layout_below="@id/kof_c"
+                android:textSize="12dp"
+                android:hint="Введите коэффициент c"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSch"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBlock"
+        android:layout_marginLeft="15dp"
+        android:background="@color/purple_200"
+        android:padding="10dp"
+        android:text="Решить уравнение"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/answertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        />
+
+</LinearLayout>
